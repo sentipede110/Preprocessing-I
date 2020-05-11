@@ -140,10 +140,20 @@ header nav {
   font-size: 2rem;
   padding: 1rem;
 }
-h2 {
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+h2,
+h3 {
   border: 1vw;
   padding: 1vw;
   font-weight: bold;
+  font-size: 2.5rem;
+  font-family: 'Modak', cursive;
 }
 body {
   line-height: 1;
@@ -161,11 +171,6 @@ h1 {
   }
 }
 /*this closes h1 */
-h2,
-h3 {
-  font-size: 2.5rem;
-  font-family: 'Modak', cursive;
-}
 .contact > div,
 .contact > p {
   background-color: #00BFFF;
@@ -186,6 +191,13 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 p {
   padding: 1vw;
@@ -224,12 +236,4 @@ table {
   justify-content: center;
   align-items: center;
   padding: 1.5vw;
-}
-/* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
 }
